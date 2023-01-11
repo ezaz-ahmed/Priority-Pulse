@@ -1,14 +1,17 @@
-name: Svelte Continous Integration On GitHub
+name: Svelte Continuous Integration
 
 on:
   pull_request:
-    brances: [main]
+    branches: [master]
 
 jobs:
-  build:
-    runs-on: [ubuntu-latest]
+  test_pull_request:
+    runs-on: ubuntu-latest
     steps:
-      - name: checkout code
-        uses: actions/checkout@v3
-      - name: node env
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
