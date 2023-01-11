@@ -9,6 +9,7 @@
 			document.documentElement.setAttribute('data-theme', theme);
 		}
 	};
+
 	const themes = [
 		'light',
 		'dark',

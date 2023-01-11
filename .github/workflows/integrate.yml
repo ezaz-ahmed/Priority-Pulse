@@ -1,0 +1,9 @@
+name: Svelte Continous Integration
+
+on:
+  pull_request:
+    brances: [master]
+
+jobs:
+  test_pull_request:
+    runs-on: ubuntu-latest
