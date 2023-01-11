@@ -1,16 +1,19 @@
-name: Svelte Continous Integration
+name: Svelte Continous Integration On GitHub
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
   pull_request:
     brances: [main]
 
 jobs:
-  test_pull_request:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-            node-version: 18
-        - run: npm ci
-        - run: npm test
-        - run: npm run build
+      steps:
+        - name: Check out repository code
+          uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+              node-version: 18
+          - run: npm ci
+          - run: npm test
+          - run: npm run build
