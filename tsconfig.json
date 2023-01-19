@@ -21,10 +21,12 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/shared/styles/*"],
       "@config/*": ["src/shared/config/*"],
       "@utils/*": ["src/shared/utils/*"],
-      "@sections/*": ["src/shared/*"],
+      "@sections/*": ["src/sections/*"],
+      "@widgets/*": ["src/common/widgets/*"],
       "@components/*": ["src/common/components/*"]
     }
   },
