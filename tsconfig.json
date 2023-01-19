@@ -22,8 +22,10 @@
     "baseUrl": ".",
     "paths": {
       "@styles/*": ["src/shared/styles/*"],
-      "@components/*": ["src/common/components/*"],
-      "@config/*": ["src/shared/config/*"]
+      "@config/*": ["src/shared/config/*"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@sections/*": ["src/shared/*"],
+      "@components/*": ["src/common/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

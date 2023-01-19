@@ -1,7 +1,7 @@
 const Meta = () => {
   return (
     <>
-      <link rel="icon" type="image/x-icon" href="/favicon.svg"></link>
+      <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
       <link rel="canonical" href="https://ezaz.vercel.app/"></link>
       <link rel="pingback" href="https://ezaz.vercel.app/"></link>
 
