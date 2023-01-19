@@ -21,7 +21,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@styles/*": ["src/shared/styles/*"],
+      "@components/*": ["src/common/components/*"],
+      "@config/*": ["src/shared/config/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
