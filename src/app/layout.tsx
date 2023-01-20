@@ -3,7 +3,6 @@ import { Urbanist } from '@next/font/google';
 //
 import Mail from '@widgets/Mail';
 import Glassify from '@components/Glassify';
-import Socials from '@widgets/Socials';
 import Header from '@widgets/Header';
 import Meta from '@components/Meta/Meta'
 //
@@ -26,8 +25,6 @@ export default function RootLayout({
 
       <body className='text-base bg-white dark:bg-slate-900 dark:text-slate-200' >
 
-        <Socials />
-        <Mail />
         <Glassify />
 
         <Header />

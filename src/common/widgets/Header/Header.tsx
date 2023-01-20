@@ -1,69 +1,51 @@
 "use client"
-
+import { socialData } from '@widgets/Socials/config/constans'
 import Link from 'next/link'
-import React from 'react'
-import { motion } from 'framer-motion'
-//
-import { navData } from '@config/constants'
 import AnimatedTextCharacter from '@components/motion/AnimatedTextCherecter'
 import Button from '@components/Button'
 
+
+
+
 const Header = () => {
-
-  // motion
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
-    }),
-  };
-
-  const child = {
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      x: 20,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
-    <header className='top-0 w-full z-50 relative py-[30px] max-w-[94%] mx-auto md:block hidden right-0 left-0' >
-      <div className='flex items-center justify-between' >
+    <header className="top-0 w-full z-50 pt-4 max-w-[94%] mx-auto md:block right-0 left-0 hidden align-middle sticky backdrop-blur ">
+      <div className='flex items-center justify-between'>
+        <nav className="w-4/12 flex">
+          {socialData.map((item, i) => (
+            <Link
+              key={i}
+              href={item.url}
+              className=' text-2xl mx-3  ml-0 text-slate-400 hover:text-sky-400 cursor-pointer transition-all duration-300 hover:bor'
+            >
+              <item.icon aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
 
-        <Link href='/' className='flex' >
-          <AnimatedTextCharacter
-            text='R'
-            className='text-4xl font-semibold text-sky-700'
-          />
-          <AnimatedTextCharacter
-            text='aihan.'
-            className='text-4xl text-slate-700/80'
-          />
-        </Link>
+        <div className='w-4/12 flex justify-center'>
+          <Link href='/' className='flex' >
+            <AnimatedTextCharacter
+              text='Ezaz'
+              className='text-4xl font-semibold text-sky-700 mr-2'
+            />
+            <AnimatedTextCharacter
+              text='Ahmed'
+              className='text-4xl text-slate-700/80'
+            />
+          </Link>
+        </div>
 
-        <motion.ul variants={container} initial="hidden" animate="visible" className='__navright' >
-          {navData.map((e: string, i: number) =>
-            <motion.a key={i} variants={child} href={`#${e.toLocaleLowerCase()}`} ><li> <span>0{i + 1}.</span> {e} </li></motion.a>
-          )}
 
+        <div className="w-4/12 flex justify-end">
           <Link href='/' target='__blank' > <Button > Resume </Button> </Link>
-        </motion.ul>
-
+        </div>
       </div>
+
+
+
+
+
     </header>
   )
 }
