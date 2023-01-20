@@ -1,6 +1,8 @@
+import classNames from 'classnames';
 import { ProjectTypes } from './types';
 
 // whenever wee need to change default className value we will use this
+export const cx = classNames;
 
 // nav data
 export const navData = ['About', 'Experience', 'Works', 'Contact'];
@@ -53,4 +55,19 @@ export const projects: ProjectTypes[] = [
     live: 'https://powermall.com',
     thumnail: 'powermall.png',
   },
+];
+
+export const skills = [
+  'Typescript',
+  'Javascript',
+  'React js',
+  'Next js',
+  'Tailwind CSS',
+  'Material UI',
+  'Firebase',
+  'Node js',
+  'Express js',
+  'MongoDB',
+  'Socket.io',
+  'webRtc',
 ];

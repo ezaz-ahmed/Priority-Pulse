@@ -1,8 +1,17 @@
-import { Manrope } from '@next/font/google';
-import "@styles/globals.css"
-import Meta from '@components/Meta/Meta';
+// imports
+import { Urbanist } from '@next/font/google';
+//
+import Mail from '@widgets/Mail';
+import Glassify from '@components/Glassify';
+import Socials from '@widgets/Socials';
+import Header from '@widgets/Header';
+import Meta from '@components/Meta/Meta'
+//
+import '../shared/styles/globals.css'
 
-const manrope = Manrope({ subsets: ['latin'] })
+// font
+const urbanist = Urbanist({ subsets: ['latin'] })
+
 
 export default function RootLayout({
   children,
@@ -10,11 +19,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={manrope.className}>
+    <html className={urbanist.className} >
       <head>
         <Meta />
       </head>
-      <body>{children}</body>
+
+      <body className='text-base bg-white dark:bg-slate-900 dark:text-slate-200' >
+
+        <Socials />
+        <Mail />
+        <Glassify />
+
+        <Header />
+        {children}
+
+      </body>
     </html>
   )
 }

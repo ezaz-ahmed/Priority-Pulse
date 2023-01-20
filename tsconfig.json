@@ -21,13 +21,16 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/shared/styles/*"],
-      "@config/*": ["src/shared/config/*"],
-      "@utils/*": ["src/shared/utils/*"],
-      "@sections/*": ["src/sections/*"],
+      "@public/*": ["public/*"],
+      "@components/*": ["src/common/components/*"],
       "@widgets/*": ["src/common/widgets/*"],
-      "@components/*": ["src/common/components/*"]
+      "@sections/*": ["src/sections/*"],
+      "@modules/*": ["src/modules/*"],
+      "@types/*": ["src/shared/@types/*"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@redux/*": ["src/shared/redux/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@config/*": ["src/shared/config/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
