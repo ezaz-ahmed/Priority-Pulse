@@ -16,7 +16,7 @@ const Header = () => {
             <Link
               key={i}
               href={item.url}
-              className=' text-2xl mx-3  ml-0 text-slate-400 hover:text-sky-400 cursor-pointer transition-all duration-300 hover:bor'
+              className=' text-2xl mx-3  ml-0 text-slate-400 hover:text-sky-400 cursor-pointer transition-all duration-300 hover:border-spacing-2'
             >
               <item.icon aria-hidden="true" />
             </Link>
@@ -26,11 +26,11 @@ const Header = () => {
         <div className='w-4/12 flex justify-center'>
           <Link href='/' className='flex' >
             <AnimatedTextCharacter
-              text='Ezaz'
-              className='text-4xl font-semibold text-sky-700 mr-2'
+              text='E'
+              className='text-4xl font-semibold text-sky-700'
             />
             <AnimatedTextCharacter
-              text='Ahmed'
+              text='ZAZ'
               className='text-4xl text-slate-700/80'
             />
           </Link>
