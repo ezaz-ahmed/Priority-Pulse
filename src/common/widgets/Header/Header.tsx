@@ -15,8 +15,9 @@ const Header = () => {
           {socialData.map((item, i) => (
             <Link
               key={i}
+              target="__blank"
               href={item.url}
-              className=' text-2xl mx-3  ml-0 text-slate-400 hover:text-sky-400 cursor-pointer transition-all duration-300 hover:border-spacing-2'
+              className=' text-2xl mx-3  ml-0 text-slate-400 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-sky-500 duration-300'
             >
               <item.icon aria-hidden="true" />
             </Link>
