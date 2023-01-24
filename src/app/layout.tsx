@@ -1,4 +1,13 @@
-import './globals.css'
+import { Jost } from '@next/font/google';
+
+import Header from '@components/Header'
+import Meta from '@components/Meta'
+
+const jost = Jost({
+  weight: '700',
+  subsets: ['latin'],
+  style: 'normal',
+})
 
 export default function RootLayout({
   children,
@@ -6,12 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+    <html lang="en" className={jost.className}>
+      <head>
+        <Meta />
+      </head>
+      <Header />
       <body>{children}</body>
     </html>
   )
