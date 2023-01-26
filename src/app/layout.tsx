@@ -1,13 +1,8 @@
-import { Jost } from '@next/font/google';
+import { Jost } from '@next/font/google'
+import '@styles/globals.css'
+import Meta from '@widgets/Meta'
 
-import Header from '@components/Header'
-import Meta from '@components/Meta'
-
-const jost = Jost({
-  weight: '700',
-  subsets: ['latin'],
-  style: 'normal',
-})
+const jost = Jost({ weight: "700", subsets: ['latin'] })
 
 export default function RootLayout({
   children,
@@ -15,12 +10,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={jost.className}>
+    <html lang="en">
       <head>
         <Meta />
       </head>
-      <Header />
-      <body>{children}</body>
+      <body className={jost.className}>{children}</body>
     </html>
   )
 }

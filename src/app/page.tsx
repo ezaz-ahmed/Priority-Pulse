@@ -5,8 +5,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main >
-
-    </main>
+    <h1 className=' text-4xl stroke-teal-900'>
+      Hey bro
+    </h1>
   )
 }
