@@ -2,8 +2,7 @@ export function Seo() {
 	const seo = {
 		author: "Ezaz Ahmed",
 		title: "Ezaz Ahmed",
-		description:
-			"A front-end developer from Moldova, who loves to develop beautiful websites, single page applications, customer relationship management or code from scratch using React and Next.js",
+		description: "A skilled",
 		url: "https://vasile-novatchii.netlify.app",
 		keywords:
 			"Portfolio website, React Portfolio, Next.js Portfolio, Web Developer Portfolio, Chakra Portfolio"

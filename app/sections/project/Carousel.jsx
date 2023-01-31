@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import styles from "./carousel.module.css";
@@ -90,7 +90,6 @@ export function Carousel(props) {
 				<Box
 					className={`${styles["carousel-content"]} ${styles[`show-${show}`]}`}
 					sx={{
-						// transform: `translateX(-${currentIndex * (100 / show)}%)`,
 						"@media (min-width: 480px)": {
 							transform: `translateX(-${currentIndex * (100 / show)}%)`
 						}
