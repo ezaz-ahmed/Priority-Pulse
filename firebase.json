@@ -1,0 +1,9 @@
+{
+	"hosting": {
+		"site": "ezaz",
+		"public": "public",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}
+
+// firebase deploy --only hosting:ezaz

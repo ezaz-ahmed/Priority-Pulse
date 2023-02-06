@@ -5,6 +5,8 @@
 		"target": "es6"
 	},
 	"include": ["app", "public", "styles", "pages"],
-	"paths": {},
+	"paths": {
+		"@config/*": ["./config/*"]
+	},
 	"exclude": ["node_modules"]
 }

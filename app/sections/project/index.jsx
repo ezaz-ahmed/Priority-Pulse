@@ -1,16 +1,23 @@
 "use client";
 
-import { Suspense, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import useSWR from "swr";
 import { Box, Button, Center, SimpleGrid } from "@chakra-ui/react";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "@config/firebase";
+
 import { HeadingDivider } from "components";
 import { ProjectItem } from "./ProjectItem";
 import { fetcher } from "util/fetcher";
 
 const DynamicLoader = dynamic(() => import("components/Loader").then((mod) => mod.Loader));
+
+const collectionRef = collection(db, "projects");
+
+useEffect(() => {}, []);
 
 const url = `${process.env.NEXT_PUBLIC_SANITY_URL}${process.env.NEXT_PUBLIC_SANITY_LATEST_PROJECTS}`;
 
