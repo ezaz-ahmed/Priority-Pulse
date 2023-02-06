@@ -2,10 +2,11 @@ export function Seo() {
 	const seo = {
 		author: "Ezaz Ahmed",
 		title: "Ezaz Ahmed",
-		description: "A skilled",
-		url: "https://vasile-novatchii.netlify.app",
+		description:
+			"Expert full stack dev w/ MERN spec. Delivers high-performing, innovative apps w/ MongoDB, Express, React, & Node.js. Focused on seamless user exp. Partner for your next web dev project. Boost your online presence w/ a skilled pro",
+		url: "https://ezaz.web.app",
 		keywords:
-			"Portfolio website, React Portfolio, Next.js Portfolio, Web Developer Portfolio, Chakra Portfolio"
+			"MERN Stack, Full Stack Development, MongoDB, Express, React, Node.js, Web Applications, User Experience, Innovative Solutions, Performance-Driven, Latest Tools and Technologies, Seamless User Interfaces, Skilled Professional, Web Development Projects, Online Presence, High-Performing, Dedicated Developer"
 	};
 
 	return (
