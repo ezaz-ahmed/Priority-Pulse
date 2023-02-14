@@ -1,49 +1,33 @@
 "use client";
 
-import { Suspense, useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
 import Link from "next/link";
+import { useRef, Suspense } from 'react';
+import { useInView } from "framer-motion"
 import dynamic from "next/dynamic";
-import useSWR from "swr";
 import { Box, Button, Center, SimpleGrid } from "@chakra-ui/react";
-import { getDocs, collection } from "firebase/firestore";
-import { db } from "@config/firebase";
+// import { db } from "@config/firebase";
 
 import { HeadingDivider } from "components";
-import { ProjectItem } from "./ProjectItem";
-import { fetcher } from "util/fetcher";
 
 const DynamicLoader = dynamic(() => import("components/Loader").then((mod) => mod.Loader));
 
-const collectionRef = collection(db, "projects");
-
-useEffect(() => {}, []);
-
-const url = `${process.env.NEXT_PUBLIC_SANITY_URL}${process.env.NEXT_PUBLIC_SANITY_LATEST_PROJECTS}`;
 
 export function ProjectsSection() {
 	const btnRef = useRef(null);
 	const isBtnInView = useInView(btnRef, { once: true });
-
-	const { data, error } = useSWR(url, fetcher, { suspense: true });
-	const projects = data?.result;
-
-	if (error && !data) {
-		return null;
-	}
 
 	return (
 		<Box as="section" id="projects" className="section">
 			<HeadingDivider title="Latest projects" />
 			<Box py={8} />
 
-			<Suspense fallback={<DynamicLoader width="100%" />}>
-				<SimpleGrid spacingY={10} spacingX={6} columns={[1, 1, 3]}>
-					{projects
+			<Suspense fallback={<DynamicLoader width="100%" />}> 
+				 <SimpleGrid spacingY={10} spacingX={6} columns={[1, 1, 3]}>
+					{/* {projects
 						?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
 						?.map((project, index) => (
 							<ProjectItem key={project._id} project={project} index={index} />
-						))}
+						))} */}
 				</SimpleGrid>
 			</Suspense>
 
