@@ -22,6 +22,12 @@ export function Seo() {
 			<meta name="og:image" content={seo.url + "/screenshot.webp"} />
 			<meta property="og:image:width" content="800" />
 			<meta property="og:image:height" content="288" />
+
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta property="twitter:domain" content={seo.url} />
+			<meta property="twitter:url" content="https://twitter.com/n_ezaz" />
+			<meta name="twitter:title" content="Ezaz Ahmed" />
+			<meta name="twitter:description" content={seo.description} />
 		</>
 	);
 }
