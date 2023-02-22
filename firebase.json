@@ -1,7 +1,10 @@
 {
-	"hosting": {
-		"site": "ezaz",
-		"public": "public",
-		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-	}
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }

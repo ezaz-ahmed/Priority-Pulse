@@ -19,7 +19,7 @@ export function Seo() {
 			<meta property="og:site_name" data-page-subject="true" content={seo.title} />
 			<meta property="og:url" content={seo.url} />
 			<meta name="og:description" content={seo.description} />
-			{/* <meta name="og:image" content={seo.url + "/screenshot.webp"} /> */}
+			<meta name="og:image" content={seo.url + "/screenshot.webp"} />
 			<meta property="og:image:width" content="800" />
 			<meta property="og:image:height" content="288" />
 		</>

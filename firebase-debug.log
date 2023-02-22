@@ -1,0 +1,34 @@
+[debug] [2023-02-19T11:51:17.157Z] ----------------------------------------------------------------------
+[debug] [2023-02-19T11:51:17.159Z] Command:       C:\Users\compl\AppData\Local\pnpm\nodejs\18.13.0\node.exe C:\Users\compl\AppData\Local\pnpm\global\5\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-19T11:51:17.159Z] CLI Version:   11.21.0
+[debug] [2023-02-19T11:51:17.160Z] Platform:      win32
+[debug] [2023-02-19T11:51:17.160Z] Node Version:  v18.13.0
+[debug] [2023-02-19T11:51:17.161Z] Time:          Sun Feb 19 2023 17:51:17 GMT+0600 (Omsk Standard Time)
+[debug] [2023-02-19T11:51:17.161Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-19T11:51:17.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-19T11:51:17.237Z] > authorizing via signed-in user (ezaznahmed@gmail.com)
+[debug] [2023-02-19T11:51:17.237Z] [iam] checking project portfolio-project-00 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-19T11:51:17.240Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-project-00:testIamPermissions [none]
+[debug] [2023-02-19T11:51:17.240Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-project-00:testIamPermissions x-goog-quota-user=projects/portfolio-project-00
+[debug] [2023-02-19T11:51:17.241Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-project-00:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-19T11:51:18.909Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-project-00:testIamPermissions 200
+[debug] [2023-02-19T11:51:18.910Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-project-00:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-19T11:51:18.912Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-00 [none]
+[debug] [2023-02-19T11:51:19.489Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-00 200
+[debug] [2023-02-19T11:51:19.490Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-00 {"projectId":"portfolio-project-00","projectNumber":"198846666355","displayName":"portfolio-project-00","name":"projects/portfolio-project-00","resources":{"hostingSite":"portfolio-project-00"},"state":"ACTIVE","etag":"1_c3ba74fa-3eb7-499e-91c3-9f3d74569f63"}
+[debug] [2023-02-19T11:51:33.782Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-project-00/sites pageToken=&pageSize=10
+[debug] [2023-02-19T11:51:35.169Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-project-00/sites 200
+[debug] [2023-02-19T11:51:35.169Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-project-00/sites {"sites":[{"name":"projects/portfolio-project-00/sites/ezaz","defaultUrl":"https://ezaz.web.app","appId":"1:198846666355:web:bc8299db26dcd6105a7c06","type":"USER_SITE"},{"name":"projects/portfolio-project-00/sites/portfolio-project-00","defaultUrl":"https://portfolio-project-00.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-02-19T11:51:35.170Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-project-00/sites 
+[debug] [2023-02-19T11:51:36.444Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-project-00/sites 200
+[debug] [2023-02-19T11:51:36.445Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-project-00/sites {"sites":[{"name":"projects/portfolio-project-00/sites/ezaz","defaultUrl":"https://ezaz.web.app","appId":"1:198846666355:web:bc8299db26dcd6105a7c06","type":"USER_SITE"},{"name":"projects/portfolio-project-00/sites/portfolio-project-00","defaultUrl":"https://portfolio-project-00.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-02-19T11:51:36.447Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-00/webApps/-/config [none]
+[debug] [2023-02-19T11:51:37.722Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-00/webApps/-/config 200
+[debug] [2023-02-19T11:51:37.723Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-00/webApps/-/config {"projectId":"portfolio-project-00","appId":"1:198846666355:web:bc8299db26dcd6105a7c06","storageBucket":"portfolio-project-00.appspot.com","apiKey":"AIzaSyAsRumYrjFGeD2B1Q5eo9n6WaH4LJJEUcA","authDomain":"portfolio-project-00.firebaseapp.com","messagingSenderId":"198846666355","measurementId":"G-6HVC8QZBS3"}
+[debug] [2023-02-19T11:52:47.599Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\compl\AppData\Local\pnpm\global\5\.pnpm\firebase-tools@11.21.0\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\compl\AppData\Local\pnpm\global\5\.pnpm\firebase-tools@11.21.0\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\compl\AppData\Local\pnpm\global\5\.pnpm\firebase-tools@11.21.0\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
