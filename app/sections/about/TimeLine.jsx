@@ -7,8 +7,8 @@ import { List, ListItem, Heading, Flex, Text, useColorMode } from "@chakra-ui/re
 const TimeLineData = [
 	{ year: 2017, text: "Made my first website with HTML & CSS" },
 	{ year: 2019, text: "Devoted myself Into MERN and JS Ecosystem" },
-	{ year: 2021, text: "Start working at Tickets4Travel" },
-	{ year: 2022, text: "Start working at Earthface" }
+	{ year: 2021, text: "Start working with Tickets4Travel" },
+	{ year: 2022, text: "Start working with Earthface" }
 ];
 
 export function TimeLine() {

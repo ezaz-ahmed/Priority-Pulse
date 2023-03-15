@@ -4,7 +4,6 @@ import { useEffect, useState, useRef, useContext } from "react";
 import Link from "next/link";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import {
-	Flex,
 	GridItem,
 	Button,
 	Heading,
@@ -29,11 +28,6 @@ export function WelcomeSection() {
 	const highlightColor = useColorModeValue("blue.500", "blue.500");
 
 	let [count, setCount] = useState(0);
-	const [text] = useState([
-		"Develope Web Application for Eartchface,",
-		"Write Blogs at Medium,",
-		"Make videos for Hungry Coder."
-	]);
 
 	const onClick = (e) => {
 		scrollToEl(e);
@@ -86,37 +80,6 @@ export function WelcomeSection() {
 						</Highlight>
 					</Heading>
 
-					<Flex direction="column" overflow="hidden" pos="relative" mt={3}>
-						<Text
-							fontSize={["lg", "x-large"]}
-							tabIndex="0"
-							ref={ref}
-							sx={{
-								transform: isInView ? "none" : "translateX(-200px)",
-								opacity: isInView ? 1 : 0,
-								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-							}}
-						>
-							I
-							<Text
-								as="span"
-								pos="absolute"
-								top={count === 0 ? "0" : count === 1 ? "-100%" : count === 2 ? "-200%" : "0"}
-								left={3}
-								display="flex"
-								flexDirection="column"
-								transition="top .5s ease-in-out"
-								tabIndex="0"
-								query={["Earthface", "Medium", "Codewind"]}
-								styles={{ color: highlightColor }}
-							>
-								{text.map((element) => (
-									<TextElement key={element} element={element} />
-								))}
-							</Text>
-						</Text>
-					</Flex>
-
 					<Text
 						fontSize={["md", "lg"]}
 						color={subTitleColor}
@@ -160,27 +123,5 @@ export function WelcomeSection() {
 				)}
 			</Grid>
 		</LazyMotion>
-	);
-}
-
-function TextElement({ element }) {
-	const firstWord = <b>{element.split(" ").at(0)}</b>;
-	const restWords = element.split(" ").slice(1).join(" ");
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
-
-	return (
-		<Text
-			as="span"
-			tabIndex="0"
-			ref={ref}
-			sx={{
-				transform: isInView ? "none" : "translateX(-200px)",
-				opacity: isInView ? 1 : 0,
-				transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-			}}
-		>
-			{firstWord} {restWords}
-		</Text>
 	);
 }

@@ -66,7 +66,7 @@ export function AboutSection() {
 						}}
 					>
 						Spending time working, improving, reading interesting dev articles or watching new
-						videos of popular teachers is something I enjoy a lot, as it is something I use for many
+						videos of tech youtubers is something I enjoy a lot, as it is something I use for many
 						hours daily. It allows me to be familiar with cutting-edge technologies and save time
 						when I start some project.
 					</Text>
