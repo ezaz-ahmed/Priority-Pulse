@@ -6,7 +6,7 @@ const nextConfig = {
 		appDir: true
 	},
 	images: {
-		domains: ["cdn.sanity.io"]
+		domains: ["i.ibb.co", "ibb.co", "picsum.photos"]
 	},
 	webpack(config) {
 		config.module.rules.push({
