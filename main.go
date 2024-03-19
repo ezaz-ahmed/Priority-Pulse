@@ -28,9 +28,25 @@ func init() {
 	}
 
 	templates["index.html"] = template.Must(template.ParseFiles("index.html"))
+	templates["todo.html"] = template.Must(template.ParseFiles("todo.html"))
 }
 
 // handlers
+
+func submitTodoHandler(w http.ResponseWriter, r *http.Request) {
+	name := r.PostFormValue("name")
+	completed := r.PostFormValue("completed") == "true"
+
+	len := len(todos)
+
+	todo := Todo{Id: len + 1, Name: name, IsCompleted: completed}
+
+	todos = append(todos, todo)
+
+	tmpl := templates["todo.html"]
+	tmpl.ExecuteTemplate(w, "todo.html", todo)
+}
+
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	json, err := json.Marshal(todos)
 
@@ -44,5 +60,6 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/submit-todo", submitTodoHandler)
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }
