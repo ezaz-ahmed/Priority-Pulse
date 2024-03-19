@@ -1,0 +1,30 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with 'go test -c'
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below if using dep)
+# vendor/
+
+# The main binary executable
+# If you build your project with `go build` put this in .gitignore
+# You might want to save build artifacts for Continuous Integration environments
+# *.go
+
+# Output of the go coverage tool, specifically when used with JetBrains IDEs
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# air generate
+tmp
